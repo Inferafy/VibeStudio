@@ -1,0 +1,7 @@
+VibeStudio application icon
+
+The code-xml glyph is derived from Lucide Icons.
+Copyright Lucide Contributors.
+Licensed under the ISC License: https://lucide.dev/license
+
+The dark rounded-square composition is specific to VibeStudio.

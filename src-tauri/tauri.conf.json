@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "VibeStudio",
+  "version": "0.1.0",
+  "identifier": "com.inferafy.vibestudio",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "VibeStudio",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 560,
+        "minHeight": 480,
+        "resizable": true,
+        "decorations": false,
+        "fullscreen": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; img-src 'self' asset: http://asset.localhost data:; style-src 'self' 'unsafe-inline'; font-src 'self'",
+      "devCsp": "default-src 'self' http:; connect-src ipc: http://ipc.localhost http: ws:; img-src 'self' asset: http://asset.localhost data: http:; style-src 'self' 'unsafe-inline' http:; font-src 'self' data: http:"
+    }
+  },
+  "bundle": {
+    "active": false
+  }
+}

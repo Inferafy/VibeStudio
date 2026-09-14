@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "projectKey": "c:/code/fixture",
+      "displayName": "fixture",
+      "workingDirectory": "C:\\code\\fixture",
+      "lastActivityAt": 1789411200000,
+      "sessions": [
+        {
+          "provider": "codex",
+          "sessionId": "codex-session",
+          "title": "Codex fixture",
+          "workingDirectory": "C:\\code\\fixture",
+          "sourcePath": "C:\\Users\\fixture\\.codex\\state.sqlite",
+          "lastActivityAt": 1789411200000
+        },
+        {
+          "provider": "claude",
+          "sessionId": "claude-session",
+          "title": "Claude fixture",
+          "workingDirectory": "C:\\code\\fixture",
+          "sourcePath": "C:\\Users\\fixture\\.claude\\projects\\session.jsonl",
+          "lastActivityAt": 1789411140000
+        }
+      ]
+    }
+  ],
+  "providers": [
+    {
+      "provider": "codex",
+      "availability": "available",
+      "sessionCount": 1,
+      "warnings": []
+    },
+    {
+      "provider": "claude",
+      "availability": "partial",
+      "sessionCount": 1,
+      "warnings": ["one damaged record"]
+    }
+  ],
+  "scannedAt": 1789411260000
+}

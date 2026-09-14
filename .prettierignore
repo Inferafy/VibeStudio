@@ -1,0 +1,12 @@
+.codegraph/
+.docseek/
+.m0-work/
+.reference/
+dist/
+node_modules/
+target/
+src-tauri/gen/
+tools/m0-acp-probe/
+docs/
+pnpm-lock.yaml
+Cargo.lock
