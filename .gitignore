@@ -1,4 +1,12 @@
 /.docseek/
+/.reference/
+/tools/m0-acp-probe/
 node_modules/
+dist/
 target/
+/src-tauri/gen/
+/src-tauri/icons/android/
+/src-tauri/icons/ios/
+/src-tauri/icons/icon.icns
 .m0-work/
+*.log

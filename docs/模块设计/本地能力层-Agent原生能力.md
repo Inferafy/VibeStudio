@@ -4,7 +4,7 @@
 
 所属分层：[本地能力层](../架构设计.md#1-总体与分层)。
 
-对应代码：[M0 ACP 探针](../../tools/m0-acp-probe/)；生产实现计划使用 `src-tauri/src/acp/capabilities/`、`src-tauri/src/acp/events/` 和 `src-tauri/src/acp/client_capabilities/`。
+对应代码：M0 临时探针保留为本机忽略资产，可审计源码见历史提交 [`4d884db`](https://github.com/Inferafy/VibeStudio/commit/4d884db)；生产实现计划使用 `src-tauri/src/acp/capabilities/` 和 `src-tauri/src/acp/client_capabilities/`。
 
 所属里程碑：[M0](../roadmap.md#m0)、[M2](../roadmap.md#m2)。
 
