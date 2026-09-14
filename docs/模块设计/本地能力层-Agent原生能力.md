@@ -4,7 +4,7 @@
 
 所属分层：[本地能力层](../架构设计.md#1-总体与分层)。
 
-对应代码：暂无正式实现；计划使用 `src-tauri/src/acp/capabilities/`、`src-tauri/src/acp/events/` 和 `src-tauri/src/acp/client_capabilities/`。
+对应代码：[M0 ACP 探针](../../tools/m0-acp-probe/)；生产实现计划使用 `src-tauri/src/acp/capabilities/`、`src-tauri/src/acp/events/` 和 `src-tauri/src/acp/client_capabilities/`。
 
 所属里程碑：[M0](../roadmap.md#m0)、[M2](../roadmap.md#m2)。
 
@@ -79,7 +79,7 @@ ACP 初始化、会话建立和 session/update
 
 ## 当前实现
 
-已完成 ACP、VibeX、CodeG 及 Claude/Codex 适配器调研，并把命令、配置、工具、审批和客户端能力加入 M0 验证矩阵。正式能力归一化代码、持久状态和界面接口尚未实现。
+已完成 ACP、VibeX、CodeG 及 Claude/Codex 适配器调研，并通过 [M0 双 Agent 接入验证](../验证记录/M0/2026-09-14-双Agent接入验证.md) 取得两类 Agent 的真实命令、配置、工具、审批、用量和取消事件。探针已实现原始事件收集、历史回放分离、命令快照去重和审批记录；正式能力归一化代码、持久状态和界面接口尚未实现。
 
 ## 验证方式
 
@@ -91,8 +91,10 @@ ACP 初始化、会话建立和 session/update
 
 ## 待扩展项
 
-根据 M0 结果确定正式 Rust 对象、Tauri 事件和前端类型。客户端文件能力、URL 提问、更多适配器扩展及高级子 Agent 事件后续按实际需求补充。
+M2 开工前依据 M0 结果确定正式 Rust 对象、Tauri 事件和前端类型。客户端文件能力、URL 提问、更多适配器扩展及高级子 Agent 事件后续按实际需求补充。
 
 ## 改动历史
 
 2026-09-14：根据 VibeX、CodeG、ACP 和两类适配器调研建立独立模块，明确原生命令、工具事件、配置及客户端能力边界。
+
+2026-09-14：完成两类 Agent 的原生命令、配置、工具、审批、用量和取消实测，记录重复增量、命令快照和用量中间态边界。
