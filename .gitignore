@@ -1,1 +1,4 @@
 /.docseek/
+node_modules/
+target/
+.m0-work/
