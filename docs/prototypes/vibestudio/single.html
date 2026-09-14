@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="color-scheme" content="light">
+ <meta name="referrer" content="no-referrer">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: file:; style-src 'self' file:; font-src 'self' file:; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+ <title>VibeStudio · 单会话</title>
+ <link rel="stylesheet" href="styles/tokens.css">
+ <link rel="stylesheet" href="styles/primitives.css">
+ <link rel="stylesheet" href="styles/workbench.css">
+</head>
+<body>
+<!--
+THESIS: One quiet workspace for native coding sessions, with chat and parallel panels as the primary surface.
+OWN-WORLD: User-pinned Codeg/Codex desktop language; white content, neutral chrome, thin separators, system UI and code typography.
+STORY: Select a project, see its existing sessions, inspect one conversation or a grid of independent conversations.
+FIRST VIEWPORT: Project strip, Project View/Vibe Coding bar, persistent session sidebar, Conversation/Canvas toolbar, transcript and anchored composer.
+FORM: Precisely specified user-pinned workspace; seed key user-pinned-codeg-codex. Static HTML/CSS, no handlers, no real Agent connection.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+DATA: All conversations, code, model selections, permissions, thinking levels, context usage, task states, and timestamps are synthetic visual fixtures.
+-->
+<div class="workbench" data-mode="single">
+ <header class="projectbar">
+  <div class="brand"><span class="brand-mark"><img class="icon icon-white" src="assets/icons/code-xml.svg" alt="" width="16" height="16" draggable="false"></span><span class="brand-name">VibeStudio</span></div>
+  <nav class="project-tabs" aria-label="项目">
+    <button class="project-tab active" type="button" aria-current="page"><img class="icon icon-muted" src="assets/icons/folder.svg" alt="" width="16" height="16" draggable="false"><span class="truncate">VibeStudio</span><img class="icon project-close" src="assets/icons/x.svg" alt="" width="16" height="16" draggable="false"></button>
+    <button class="project-tab" type="button"><img class="icon icon-muted" src="assets/icons/folder.svg" alt="" width="16" height="16" draggable="false"><span>Atlas Web</span></button>
+    <button class="project-tab" type="button"><img class="icon icon-muted" src="assets/icons/folder.svg" alt="" width="16" height="16" draggable="false"><span>Orbit API</span></button>
+    <button class="icon-button " type="button" title="添加项目" aria-label="添加项目"><img class="icon icon-muted" src="assets/icons/plus.svg" alt="" width="16" height="16" draggable="false"></button>
+  </nav>
+  <div class="window-controls" aria-label="窗口"><button class="icon-button window-control" type="button" title="最小化" aria-label="最小化"><img class="icon icon-muted" src="assets/icons/minus.svg" alt="" width="16" height="16" draggable="false"></button><button class="icon-button window-control" type="button" title="最大化" aria-label="最大化"><img class="icon icon-muted" src="assets/icons/square.svg" alt="" width="16" height="16" draggable="false"></button><button class="icon-button window-control close" type="button" title="关闭窗口" aria-label="关闭窗口"><img class="icon icon-muted" src="assets/icons/x.svg" alt="" width="16" height="16" draggable="false"></button></div>
+ </header>
+ <nav class="viewbar" aria-label="项目视图">
+  <div class="view-tabs">
+   <button class="view-tab" type="button" disabled=""><img class="icon " src="assets/icons/file-code.svg" alt="" width="16" height="16" draggable="false"><span>项目视图</span></button>
+   <button class="view-tab active" type="button" aria-current="page"><img class="icon " src="assets/icons/sparkles.svg" alt="" width="16" height="16" draggable="false"><span>Vibe Coding</span></button>
+  </div>
+  <div class="viewbar-actions"><span class="state-label"><span class="state-dot"></span><span class="count">4 个运行中</span></span><button class="icon-button small" type="button" title="重新扫描会话" aria-label="重新扫描会话"><img class="icon icon-muted" src="assets/icons/refresh-cw.svg" alt="" width="16" height="16" draggable="false"></button><button class="icon-button small" type="button" title="设置" aria-label="设置"><img class="icon icon-muted" src="assets/icons/settings.svg" alt="" width="16" height="16" draggable="false"></button></div>
+ </nav>
+ <div class="workspace">
+ <aside class="sidebar" aria-label="会话列表">
+  <div class="sidebar-heading"><h2>会话</h2><button class="icon-button small" type="button" title="收起会话栏" aria-label="收起会话栏"><img class="icon icon-muted" src="assets/icons/panel-left-close.svg" alt="" width="16" height="16" draggable="false"></button></div>
+  <label class="searchbox"><img class="icon icon-muted" src="assets/icons/search.svg" alt="" width="16" height="16" draggable="false"><input type="search" placeholder="搜索会话" aria-label="搜索会话" readonly=""></label>
+  <div class="sidebar-rail-tools"><button class="icon-button small" type="button" title="搜索会话" aria-label="搜索会话"><img class="icon icon-muted" src="assets/icons/search.svg" alt="" width="16" height="16" draggable="false"></button></div><div class="sidebar-filter"><button class="filter-button" type="button">全部 Agent <img class="icon icon-muted" src="assets/icons/chevron-down.svg" alt="" width="16" height="16" draggable="false"></button><button class="icon-button small" type="button" title="会话列表选项" aria-label="会话列表选项"><img class="icon icon-muted" src="assets/icons/ellipsis.svg" alt="" width="16" height="16" draggable="false"></button></div>
+  <div class="session-list"><div class="session-group-label">今天</div><button class="session-row active" type="button" title="统一会话扫描 · Codex · 执行中" data-session="s01"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span>
+   <span class="session-row-content"><span class="session-row-title">统一会话扫描</span><span class="session-row-meta"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>14:32</time></span></span>
+   <span class="session-row-state" aria-label="执行中"><span class="state-dot " aria-hidden="true"></span></span>
+  </button>
+<button class="session-row " type="button" title="统一聊天消息渲染 · Claude Code · 执行中" data-session="s02"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span></span>
+   <span class="session-row-content"><span class="session-row-title">统一聊天消息渲染</span><span class="session-row-meta"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span><span>Claude Code</span><time>14:30</time></span></span>
+   <span class="session-row-state" aria-label="执行中"><span class="state-dot " aria-hidden="true"></span></span>
+  </button>
+<button class="session-row " type="button" title="网格布局与面板焦点 · Codex · 等待审批" data-session="s03"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span>
+   <span class="session-row-content"><span class="session-row-title">网格布局与面板焦点</span><span class="session-row-meta"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>14:26</time></span></span>
+   <span class="session-row-state" aria-label="等待审批"><span class="state-dot approval" aria-hidden="true"></span></span>
+  </button>
+<button class="session-row " type="button" title="历史会话续接 · Claude Code · 连接中断" data-session="s04"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span></span>
+   <span class="session-row-content"><span class="session-row-title">历史会话续接</span><span class="session-row-meta"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span><span>Claude Code</span><time>14:21</time></span></span>
+   <span class="session-row-state" aria-label="连接中断"><span class="state-dot error" aria-hidden="true"></span></span>
+  </button>
+<button class="session-row " type="button" title="调整 Agent 选择器 · Claude Code · 执行中" data-session="s05"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span></span>
+   <span class="session-row-content"><span class="session-row-title">调整 Agent 选择器</span><span class="session-row-meta"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span><span>Claude Code</span><time>13:48</time></span></span>
+   <span class="session-row-state" aria-label="执行中"><span class="state-dot " aria-hidden="true"></span></span>
+  </button>
+<button class="session-row " type="button" title="标题解析优先级 · Codex · 已完成" data-session="s06"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span>
+   <span class="session-row-content"><span class="session-row-title">标题解析优先级</span><span class="session-row-meta"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>13:20</time></span></span>
+   <span class="session-row-state" aria-label="已完成"><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></span>
+  </button>
+<button class="session-row " type="button" title="消息路由去重 · Codex · 执行中" data-session="s07"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span>
+   <span class="session-row-content"><span class="session-row-title">消息路由去重</span><span class="session-row-meta"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>12:56</time></span></span>
+   <span class="session-row-state" aria-label="执行中"><span class="state-dot " aria-hidden="true"></span></span>
+  </button>
+<div class="session-group-label">昨天</div><button class="session-row " type="button" title="长对话分页 · Claude Code · 已完成" data-session="s08"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span></span>
+   <span class="session-row-content"><span class="session-row-title">长对话分页</span><span class="session-row-meta"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span><span>Claude Code</span><time>16:42</time></span></span>
+   <span class="session-row-state" aria-label="已完成"><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></span>
+  </button>
+<button class="session-row " type="button" title="扫描路径配置 · Codex · 已完成" data-session="s09"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span>
+   <span class="session-row-content"><span class="session-row-title">扫描路径配置</span><span class="session-row-meta"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>15:08</time></span></span>
+   <span class="session-row-state" aria-label="已完成"><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></span>
+  </button>
+<button class="session-row " type="button" title="连接中断后的重试 · Claude Code · 已完成" data-session="s10"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span></span>
+   <span class="session-row-content"><span class="session-row-title">连接中断后的重试</span><span class="session-row-meta"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span><span>Claude Code</span><time>11:24</time></span></span>
+   <span class="session-row-state" aria-label="已完成"><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></span>
+  </button>
+<div class="session-group-label">更早</div><button class="session-row " type="button" title="代码块复制样式 · Claude Code · 已完成" data-session="s11"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span></span>
+   <span class="session-row-content"><span class="session-row-title">代码块复制样式</span><span class="session-row-meta"><span class="agent-mark claude tiny"><img class="icon" src="assets/claude.svg" alt="" width="16" height="16"></span><span>Claude Code</span><time>9月12日</time></span></span>
+   <span class="session-row-state" aria-label="已完成"><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></span>
+  </button>
+<button class="session-row " type="button" title="修复中文输入误发送 · Codex · 已完成" data-session="s12"><span class="session-rail-mark" aria-hidden="true"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span>
+   <span class="session-row-content"><span class="session-row-title">修复中文输入误发送</span><span class="session-row-meta"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>9月11日</time></span></span>
+   <span class="session-row-state" aria-label="已完成"><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></span>
+  </button></div>
+  <div class="sidebar-footer"><button class="button new-session" type="button"><img class="icon " src="assets/icons/plus.svg" alt="" width="16" height="16" draggable="false"><span>新建会话</span></button><div class="sidebar-footer-bottom"><span class="count">12 <span class="sidebar-count-label">个会话</span></span><button class="icon-button small" type="button" title="归档会话" aria-label="归档会话"><img class="icon icon-muted" src="assets/icons/archive.svg" alt="" width="16" height="16" draggable="false"></button></div></div>
+ </aside>
+ <main class="main" aria-label="VibeStudio 会话工作区">
+ <div class="content-toolbar">
+ <nav class="content-tabs" aria-label="Vibe Coding 模式"><button class="content-tab active" type="button" aria-current="page">会话</button><button class="content-tab" type="button" disabled="">画布</button></nav>
+ <div class="content-actions"><div class="mode-control" role="group" aria-label="会话显示方式"><button class="icon-button selected" type="button" title="单会话" aria-label="单会话"><img class="icon icon-muted" src="assets/icons/panels-top-left.svg" alt="" width="16" height="16" draggable="false"></button><button class="icon-button " type="button" title="网格会话" aria-label="网格会话"><img class="icon icon-muted" src="assets/icons/grid-2x2.svg" alt="" width="16" height="16" draggable="false"></button></div><span class="toolbar-divider"></span><button class="icon-button small" type="button" title="工作区选项" aria-label="工作区选项"><img class="icon icon-muted" src="assets/icons/ellipsis.svg" alt="" width="16" height="16" draggable="false"></button></div>
+ </div>
+ <section class="single-view" aria-label="单会话">
+ <header class="session-heading"><div class="session-heading-main"><h1 class="truncate">统一会话扫描</h1><div class="session-location"><img class="icon icon-muted" src="assets/icons/folder.svg" alt="" width="16" height="16" draggable="false"><span class="truncate" title="C:\code\VibeStudio">C:\code\VibeStudio</span><span class="muted">/</span><img class="icon icon-muted" src="assets/icons/git-branch.svg" alt="" width="16" height="16" draggable="false"><span>main</span></div></div><div class="session-heading-actions"><span class="state-label running" title="执行中"><span class="state-dot "></span><span class="">执行中</span></span><button class="icon-button " type="button" title="当前会话选项" aria-label="当前会话选项"><img class="icon icon-muted" src="assets/icons/ellipsis.svg" alt="" width="16" height="16" draggable="false"></button></div></header>
+ <div class="conversation"><div class="reading-column">
+  <div class="conversation-day">今天</div>
+  <div class="user-message">把 Claude Code 和 Codex 的会话按真实项目目录合并，用户自定义标题要优先保留。扫描保持只读，不要改动原始记录。</div>
+  <div class="message-byline"><span class="agent-mark  "><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span><span>Codex</span><time>14:32</time></div>
+  <div class="agent-message">
+   <p>我先检查两种会话来源，再把项目目录、标题和活动时间整理成同一份会话摘要。</p>
+   <div class="tool-list"><div class="tool-row"><img class="icon " src="assets/icons/chevron-right.svg" alt="" width="16" height="16" draggable="false"><span class="tool-name">读取</span><span class="tool-path" title="src-tauri/src/scanner/claude.rs">src-tauri/src/scanner/claude.rs</span><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></div><div class="tool-row"><img class="icon " src="assets/icons/chevron-right.svg" alt="" width="16" height="16" draggable="false"><span class="tool-name">读取</span><span class="tool-path" title="src-tauri/src/scanner/codex.rs">src-tauri/src/scanner/codex.rs</span><img class="icon " src="assets/icons/check.svg" alt="" width="16" height="16" draggable="false"></div></div>
+   <p>标题按用户命名优先显示；两类会话保留各自的原生标识，后面继续聊天时仍回到正确的上下文。</p>
+   <div class="code-block"><div class="code-block-heading"><span>会话摘要 · TypeScript</span><button class="icon-button small" type="button" title="复制代码" aria-label="复制代码"><img class="icon icon-muted" src="assets/icons/copy.svg" alt="" width="16" height="16" draggable="false"></button></div><pre><code><span class="code-keyword">type</span> <span class="code-type">SessionSource</span> = <span class="code-string">"claude"</span> | <span class="code-string">"codex"</span>;
+
+<span class="code-keyword">interface</span> <span class="code-type">SessionSummary</span> {
+  id: <span class="code-type">string</span>;
+  source: <span class="code-type">SessionSource</span>;
+  title: <span class="code-type">string</span>;
+  workingDirectory: <span class="code-type">string</span>;
+  lastActivity: <span class="code-type">number</span>;
+}</code></pre></div>
+   <p>数据库继续使用只读连接。遇到目录缺失或半条记录，会保留其他有效会话，不把一次读取失败当成整个项目没有历史。</p>
+   <div class="work-progress"><img class="icon " src="assets/icons/loader-circle.svg" alt="" width="16" height="16" draggable="false"><span>正在检查目录合并与标题回退…</span></div>
+  </div>
+ </div></div><div class="composer-wrap"><div class="reading-column">
+  <div class="composer">
+   <textarea rows="2" readonly="" aria-label="统一会话扫描的消息输入" placeholder="继续补充你的想法…"></textarea>
+   <div class="composer-bottom"><div class="composer-controls">
+    <button class="icon-button small" type="button" title="添加上下文" aria-label="添加上下文"><img class="icon icon-muted" src="assets/icons/plus.svg" alt="" width="16" height="16" draggable="false"></button>
+    <span class="composer-agent" title="Codex" role="img" aria-label="Codex"><span class="agent-mark  tiny"><img class="icon " src="assets/icons/square-terminal.svg" alt="" width="16" height="16" draggable="false"></span></span><button class="permission-picker" type="button" title="权限：默认权限" aria-label="权限：默认权限"><img class="icon icon-muted" src="assets/icons/shield-check.svg" alt="" width="16" height="16" draggable="false"><span class="truncate">默认权限</span><img class="icon icon-muted" src="assets/icons/chevron-down.svg" alt="" width="16" height="16" draggable="false"></button>
+
+   </div><div class="composer-actions"><button class="model-picker" type="button" title="模型：GPT-5.3-Codex" aria-label="模型：GPT-5.3-Codex"><span class="truncate">GPT-5.3-Codex</span><img class="icon icon-muted" src="assets/icons/chevron-down.svg" alt="" width="16" height="16" draggable="false"></button><button class="reasoning-picker" type="button" title="思考等级：高" aria-label="思考等级：高"><span class="truncate">高</span><img class="icon icon-muted" src="assets/icons/chevron-down.svg" alt="" width="16" height="16" draggable="false"></button><span class="context-usage" title="上下文窗口已使用 28%" role="img" aria-label="上下文窗口已使用 28%"><span class="context-pie" aria-hidden="true" data-context-used="28"></span></span><button class="send-button" type="button" title="停止当前执行" aria-label="停止当前执行"><img class="icon icon-white" src="assets/icons/square.svg" alt="" width="16" height="16" draggable="false"></button></div></div>
+  </div>
+ </div></div>
+ </section>
+ </main>
+ </div>
+</div>
+
+
+
+
+</body></html>

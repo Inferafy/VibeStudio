@@ -1,0 +1,278 @@
+[
+  {
+    "name": "single-desktop",
+    "viewport": {
+      "width": 1536,
+      "height": 960
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 0,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 13622,
+      "nonwhite": 73247,
+      "chromatic": 29268
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\single-desktop.png"
+  },
+  {
+    "name": "grid-desktop",
+    "viewport": {
+      "width": 1536,
+      "height": 960
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 4,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 20942,
+      "nonwhite": 106708,
+      "chromatic": 43301
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-desktop.png"
+  },
+  {
+    "name": "grid-three-desktop",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 9,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 34679,
+      "nonwhite": 154835,
+      "chromatic": 63280
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-three-desktop.png"
+  },
+  {
+    "name": "single-laptop",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 0,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 11976,
+      "nonwhite": 62341,
+      "chromatic": 22805
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\single-laptop.png"
+  },
+  {
+    "name": "grid-laptop",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 4,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 16359,
+      "nonwhite": 82719,
+      "chromatic": 31848
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-laptop.png"
+  },
+  {
+    "name": "grid-three-laptop",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 9,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 22374,
+      "nonwhite": 98894,
+      "chromatic": 40730
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-three-laptop.png"
+  },
+  {
+    "name": "single-narrow",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 0,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 12199,
+      "nonwhite": 60078,
+      "chromatic": 23616
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\single-narrow.png"
+  },
+  {
+    "name": "grid-narrow",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 4,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 16702,
+      "nonwhite": 81613,
+      "chromatic": 32182
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-narrow.png"
+  },
+  {
+    "name": "grid-three-narrow",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 9,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 17638,
+      "nonwhite": 81563,
+      "chromatic": 31822
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-three-narrow.png"
+  },
+  {
+    "name": "single-mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 0,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 9777,
+      "nonwhite": 36578,
+      "chromatic": 16460
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\single-mobile.png"
+  },
+  {
+    "name": "grid-mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 4,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 9868,
+      "nonwhite": 40350,
+      "chromatic": 17247
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-mobile.png"
+  },
+  {
+    "name": "grid-three-mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "overflowing": [],
+    "unnamedButtons": 0,
+    "scripts": 0,
+    "inlineHandlers": 0,
+    "panels": 9,
+    "sidebarVisible": true,
+    "fonts": "\"Segoe UI\", \"Microsoft YaHei\", system-ui, sans-serif",
+    "errors": [],
+    "pixels": {
+      "dark": 9812,
+      "nonwhite": 39348,
+      "chromatic": 16222
+    },
+    "screenshot": "C:\\Users\\zhoutao\\Documents\\Codex\\2026-09-14\\new-chat\\work\\prototype-qa\\round2\\grid-three-mobile.png"
+  }
+]

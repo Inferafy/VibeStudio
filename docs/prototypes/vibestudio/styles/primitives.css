@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--text);
+  background: var(--surface);
+  font-family: var(--font-ui);
+  font-size: var(--font-body);
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+button {
+  color: inherit;
+  cursor: default;
+}
+
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: var(--line) solid var(--focus);
+  outline-offset: var(--line);
+}
+
+input,
+textarea {
+  caret-color: var(--text);
+}
+
+textarea {
+  resize: none;
+}
+
+::selection {
+  color: var(--text);
+  background: #dae4f5;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border: var(--line) solid transparent;
+  border-radius: var(--radius-control);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.icon {
+  display: block;
+  flex: 0 0 var(--icon-size);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  object-fit: contain;
+}
+
+.icon-muted {
+  opacity: 0.55;
+}
+
+.icon-white {
+  filter: invert(1);
+}
+
+.icon-button {
+  display: inline-flex;
+  flex: 0 0 var(--button-size);
+  align-items: center;
+  justify-content: center;
+  width: var(--button-size);
+  height: var(--button-size);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  transition: background-color var(--duration-fast);
+}
+
+.icon-button:hover {
+  background: var(--surface-hover);
+}
+
+.icon-button.small {
+  flex-basis: var(--button-small-size);
+  width: var(--button-small-size);
+  height: var(--button-small-size);
+}
+
+.icon-button.selected {
+  background: var(--surface);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--space-7);
+  padding: var(--space-1) var(--space-3);
+  border: var(--line) solid var(--border-control);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  font-size: var(--font-label);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: var(--surface-subtle);
+}
+
+.button.primary {
+  color: var(--surface);
+  border-color: var(--text);
+  background: var(--text);
+}
+
+.button.primary:hover {
+  background: #353535;
+}
+
+.button.quiet {
+  border-color: transparent;
+  background: transparent;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.truncate {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: var(--font-code);
+  font-size: var(--font-code-size);
+}
+
+.agent-mark {
+  display: inline-flex;
+  flex: 0 0 var(--space-6);
+  align-items: center;
+  justify-content: center;
+  width: var(--space-6);
+  height: var(--space-6);
+  border-radius: var(--radius-control);
+  background: var(--text);
+}
+
+.agent-mark .icon {
+  width: var(--space-4);
+  height: var(--space-4);
+  filter: invert(1);
+}
+
+.agent-mark.claude {
+  background: var(--claude-surface);
+}
+
+.agent-mark.claude .icon {
+  filter: none;
+  opacity: 0.76;
+}
+
+.agent-mark.tiny {
+  flex-basis: var(--space-4);
+  width: var(--space-4);
+  height: var(--space-4);
+  border-radius: var(--space-1);
+}
+
+.agent-mark.tiny .icon {
+  width: var(--space-3);
+  height: var(--space-3);
+}
+
+.state-dot {
+  display: inline-block;
+  flex: 0 0 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--focus);
+}
+
+.state-dot.approval {
+  background: var(--warning);
+}
+
+.state-dot.error {
+  background: var(--danger);
+}
+
+.state-dot.done {
+  background: var(--success);
+}
+
+.state-label {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--font-small);
+  white-space: nowrap;
+}
+
+.state-label.approval {
+  color: var(--warning);
+}
+
+.state-label.error {
+  color: var(--danger);
+}
+
+.state-label.done {
+  color: var(--success);
+}
+
+.count {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

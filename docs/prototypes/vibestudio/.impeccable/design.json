@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T10:15:59.363Z",
+  "title": "Design System: VibeStudio Prototype Workspace",
+  "extensions": {
+    "colorMeta": {
+      "surface": {
+        "role": "neutral",
+        "displayName": "内容白",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#202020",
+          "#3a3a3a",
+          "#575757",
+          "#8e8e8e",
+          "#d1d1d1",
+          "#e5e5e5",
+          "#f6f6f6",
+          "#ffffff"
+        ]
+      },
+      "chrome": {
+        "role": "neutral",
+        "displayName": "工作台灰",
+        "canonical": "#fafafa",
+        "tonalRamp": [
+          "#202020",
+          "#3a3a3a",
+          "#575757",
+          "#8e8e8e",
+          "#d1d1d1",
+          "#e5e5e5",
+          "#f6f6f6",
+          "#fafafa"
+        ]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "侧栏灰",
+        "canonical": "#f6f6f6",
+        "tonalRamp": [
+          "#202020",
+          "#3a3a3a",
+          "#575757",
+          "#8e8e8e",
+          "#d1d1d1",
+          "#e5e5e5",
+          "#ededed",
+          "#f6f6f6"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "工作焦点蓝",
+        "canonical": "#3768c9",
+        "tonalRamp": [
+          "#102550",
+          "#183a7a",
+          "#2450a2",
+          "#3768c9",
+          "#6d91d8",
+          "#a6bee8",
+          "#d5e0f5",
+          "#f3f6fc"
+        ]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "完成绿",
+        "canonical": "#34724a",
+        "tonalRamp": [
+          "#163322",
+          "#214b30",
+          "#28613c",
+          "#34724a",
+          "#6b9c7a",
+          "#a1c4aa",
+          "#d3e7d7",
+          "#edf6ef"
+        ]
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "审批琥珀",
+        "canonical": "#875c1b",
+        "tonalRamp": [
+          "#3a250b",
+          "#57360f",
+          "#704912",
+          "#875c1b",
+          "#ad884d",
+          "#ceb78a",
+          "#eee4ce",
+          "#fcf7eb"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "错误红",
+        "canonical": "#b54141",
+        "tonalRamp": [
+          "#4e1717",
+          "#702222",
+          "#922f2f",
+          "#b54141",
+          "#ca7777",
+          "#e0aaaa",
+          "#f3d3d3",
+          "#fcf1f1"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "工作区标题",
+        "purpose": "会话和侧栏标题。"
+      },
+      "body": {
+        "displayName": "正文",
+        "purpose": "工作区文本和会话记录。"
+      },
+      "label": {
+        "displayName": "控件标签",
+        "purpose": "标签、选项卡和面板标题。"
+      },
+      "small": {
+        "displayName": "辅助文字",
+        "purpose": "时间、状态和辅助信息。"
+      },
+      "code": {
+        "displayName": "代码文字",
+        "purpose": "命令、路径、内联代码和代码块。"
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "120ms",
+        "purpose": "图标控件和按钮背景状态变化。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "用户偏好减少动态时关闭过渡。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-sidebar",
+        "value": "1180px"
+      },
+      {
+        "name": "single-column",
+        "value": "860px"
+      },
+      {
+        "name": "mobile-rail",
+        "value": "640px"
+      },
+      {
+        "name": "compact-session-panel",
+        "value": "400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "深色主按钮，用于需要明确确认的静态展示。",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">允许本次</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; min-height:32px; padding:4px 12px; border:1px solid var(--border-control); border-color:var(--text); border-radius:var(--radius-control); background:var(--text); color:var(--surface); font:500 13px/1.55 var(--font-ui); letter-spacing:0; white-space:nowrap; transition:background-color var(--duration-fast); } .ds-btn-primary:hover { background:#353535; } .ds-btn-primary:focus-visible { outline:1px solid var(--focus); outline-offset:1px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "低强调度操作，保持工作区的中性层次。",
+      "html": "<button class=\"ds-btn-quiet\" type=\"button\">拒绝</button>",
+      "css": ".ds-btn-quiet { display:inline-flex; align-items:center; justify-content:center; min-height:32px; padding:4px 12px; border:1px solid transparent; border-radius:var(--radius-control); background:transparent; color:var(--text); font:500 13px/1.55 var(--font-ui); letter-spacing:0; white-space:nowrap; transition:background-color var(--duration-fast); } .ds-btn-quiet:hover { background:var(--surface-subtle); } .ds-btn-quiet:focus-visible { outline:1px solid var(--focus); outline-offset:1px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "侧栏中的只读会话搜索框展示。",
+      "html": "<label class=\"ds-search\"><svg aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><circle cx=\"7\" cy=\"7\" r=\"4.5\" fill=\"none\" stroke=\"currentColor\"/><path d=\"m10.5 10.5 3 3\" fill=\"none\" stroke=\"currentColor\"/></svg><input type=\"search\" placeholder=\"搜索会话\" readonly></label>",
+      "css": ".ds-search { display:flex; align-items:center; gap:8px; height:32px; padding:0 8px; border:1px solid var(--border-control); border-radius:var(--radius-control); background:var(--surface); color:var(--text-muted); font:400 13px/1.55 var(--font-ui); } .ds-search input { min-width:0; width:100%; padding:0; border:0; outline:0; background:transparent; color:var(--text); font:inherit; } .ds-search input::placeholder { color:var(--text-muted); } .ds-search input:focus-visible { outline:1px solid var(--focus); outline-offset:1px; }"
+    },
+    {
+      "name": "Session Row",
+      "kind": "nav",
+      "refersTo": "session-panel",
+      "description": "侧栏中的固定高度会话条目，使用选中和状态点表达上下文。",
+      "html": "<button class=\"ds-session-row\" type=\"button\"><span class=\"ds-session-mark\"><svg aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><path d=\"M3 2h7l3 3v9H3zM10 2v3h3\" fill=\"none\" stroke=\"currentColor\"/><path d=\"M5 8h6M5 11h6\" fill=\"none\" stroke=\"currentColor\"/></svg></span><span class=\"ds-session-copy\"><strong>统一会话扫描</strong><small>Codex · 14:32</small></span><i class=\"ds-state-dot\" aria-label=\"运行中\"></i></button>",
+      "css": ".ds-session-row { display:flex; align-items:center; gap:8px; width:100%; height:54px; padding:8px; border:0; border-radius:var(--radius-control); background:transparent; color:var(--text); text-align:left; } .ds-session-row:hover { background:var(--surface-hover); } .ds-session-row:focus-visible { outline:1px solid var(--focus); outline-offset:1px; } .ds-session-mark { display:grid; flex:0 0 24px; width:24px; height:24px; place-items:center; border-radius:var(--radius-control); background:var(--text); color:var(--surface); } .ds-session-copy { min-width:0; flex:1; } .ds-session-copy strong,.ds-session-copy small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .ds-session-copy strong { font:500 13px/1.65 var(--font-ui); } .ds-session-copy small { color:var(--text-muted); font:400 12px/1.2 var(--font-ui); } .ds-state-dot { flex:0 0 6px; width:6px; height:6px; border-radius:50%; background:var(--focus); }"
+    },
+    {
+      "name": "Session Panel",
+      "kind": "card",
+      "refersTo": "session-panel",
+      "description": "网格中的独立会话面板，共享标题、状态、记录和编辑器区域。",
+      "html": "<section class=\"ds-panel\"><header><strong>网格布局与面板焦点</strong><span class=\"ds-state\">等待审批</span></header><div class=\"ds-panel-body\">检查多面板的焦点和消息归属。</div></section>",
+      "css": ".ds-panel { display:flex; flex-direction:column; min-height:312px; overflow:hidden; border-right:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--surface); color:var(--text); } .ds-panel header { display:flex; align-items:center; justify-content:space-between; gap:4px; min-height:40px; padding:8px 12px; border-bottom:1px solid var(--border); font:500 13px/1.55 var(--font-ui); } .ds-state { color:var(--warning); font:400 12px/1.2 var(--font-ui); } .ds-panel-body { flex:1; padding:12px 16px; overflow:auto; font:400 13px/1.75 var(--font-ui); }"
+    },
+    {
+      "name": "Composer",
+      "kind": "custom",
+      "refersTo": "composer",
+      "description": "左侧固定 Agent 图标与权限；右侧模型、思考等级、上下文用量和发送。全部为静态展示。",
+      "html": "<div class=\"ds-composer\"><textarea rows=\"2\" readonly aria-label=\"消息输入\" placeholder=\"继续补充你的想法…\"></textarea><div class=\"ds-composer-bottom\"><div class=\"ds-composer-controls\"><button class=\"ds-icon-button\" type=\"button\" title=\"添加上下文\" aria-label=\"添加上下文\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"M5 12h14\"/>\n  <path d=\"M12 5v14\"/>\n</svg></button><span class=\"ds-agent\" title=\"Codex\" role=\"img\" aria-label=\"Codex\"><span class=\"ds-agent-mark\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"m7 11 2-2-2-2\"/>\n  <path d=\"M11 13h4\"/>\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\"/>\n</svg></span></span><button class=\"ds-picker\" type=\"button\" title=\"权限：默认权限\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/>\n  <path d=\"m9 12 2 2 4-4\"/>\n</svg><span>默认权限</span><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"m6 9 6 6 6-6\"/>\n</svg></button></div><div class=\"ds-composer-actions\"><button class=\"ds-picker ds-model\" type=\"button\" title=\"模型：GPT-5.3-Codex\"><span>GPT-5.3-Codex</span><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"m6 9 6 6 6-6\"/>\n</svg></button><button class=\"ds-picker\" type=\"button\" title=\"思考等级：高\"><span>高</span><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"m6 9 6 6 6-6\"/>\n</svg></button><span class=\"ds-context\" title=\"上下文窗口已使用 28%\" role=\"img\" aria-label=\"上下文窗口已使用 28%\"><span class=\"ds-context-pie\" aria-hidden=\"true\"></span></span><button class=\"ds-send\" type=\"button\" title=\"发送消息\" aria-label=\"发送消息\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n  <path d=\"m5 12 7-7 7 7\"/>\n  <path d=\"M12 19V5\"/>\n</svg></button></div></div></div>",
+      "css": ".ds-composer { padding:var(--space-3); border:var(--line) solid var(--border-control); border-radius:var(--radius-composer); background:var(--surface); color:var(--text); font:400 var(--font-body)/1.55 var(--font-ui); letter-spacing:0; } .ds-composer textarea { display:block; width:100%; height:48px; padding:var(--space-1); border:0; outline:0; resize:none; background:transparent; color:var(--text); font:400 var(--font-body)/1.6 var(--font-ui); box-sizing:border-box; } .ds-composer textarea::placeholder { color:var(--text-muted); } .ds-composer-bottom { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-2); } .ds-composer-controls,.ds-composer-actions { display:flex; align-items:center; gap:var(--space-2); } .ds-composer-controls { flex:0 0 auto; } .ds-composer-actions { min-width:0; max-width:100%; margin-left:auto; justify-content:flex-end; } .ds-icon { display:block; flex-shrink:0; } .ds-icon-button,.ds-agent,.ds-context,.ds-send { display:inline-flex; flex:0 0 var(--button-size); align-items:center; justify-content:center; width:var(--button-size); height:var(--button-size); padding:0; border:0; background:transparent; color:var(--text-muted); } .ds-icon-button,.ds-picker { border-radius:var(--space-1); } .ds-agent-mark { display:flex; align-items:center; justify-content:center; width:var(--space-4); height:var(--space-4); border-radius:var(--space-1); background:var(--text); color:var(--surface); } .ds-agent-mark .ds-icon { width:var(--space-3); height:var(--space-3); } .ds-picker { display:flex; align-items:center; gap:var(--space-1); min-width:0; height:var(--button-size); padding:0 var(--space-1); border:0; background:transparent; color:var(--text-secondary); font:400 var(--font-small)/1.55 var(--font-ui); white-space:nowrap; letter-spacing:0; } .ds-picker .ds-icon { width:var(--space-3); height:var(--space-3); } .ds-model { max-width:var(--model-control-max-width); } .ds-model span { overflow:hidden; text-overflow:ellipsis; } .ds-context-pie { width:var(--context-meter-size); height:var(--context-meter-size); border:var(--line) solid var(--text-muted); border-radius:50%; background:conic-gradient(var(--text-muted) 28%,var(--surface-selected) 0); box-sizing:border-box; } .ds-send { border-radius:50%; background:var(--text); color:var(--surface); } .ds-picker:hover,.ds-icon-button:hover { background:var(--surface-hover); } .ds-composer button:focus-visible,.ds-composer textarea:focus-visible { outline:var(--line) solid var(--focus); outline-offset:var(--line); } .ds-send:disabled { background:var(--surface-selected); color:var(--text-disabled); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "用户钉选的 Codeg/Codex 桌面工作区",
+    "overview": "白色内容面承载会话阅读，中性灰工作台组织项目、模式和会话列表。细分隔线、紧凑字体和共享会话面板维持适合扫描的桌面密度。状态色只承担焦点、审批、错误和完成等已观察语义。该记录只覆盖静态原型，不代表生产批准。",
+    "keyCharacteristics": [
+      "白色内容面",
+      "中性灰工作台",
+      "1px 分隔线",
+      "系统 UI 与代码字体",
+      "56px 移动会话轨道"
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Accent Rule",
+        "body": "Accent colors appear where they explain state or focus; the workspace remains neutral at rest.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Rule",
+        "body": "Use the system UI stack for workspace language and the code stack for paths, commands and code.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Workspace Rule",
+        "body": "Keep resting surfaces flat; use tone, border and focus treatment to explain hierarchy.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "保持内容白和中性灰工作台。",
+      "复用系统 UI、代码字体和共享间距。",
+      "保留移动端 56px 会话轨道。",
+      "在显示相关状态时把审批和重连提示放在编辑器上方。",
+      "Do keep the Agent icon fixed and permissions alongside it; keep model, thinking level and context usage next to send on the right."
+    ],
+    "donts": [
+      "添加阴影、装饰性渐变或另一套视觉语言。",
+      "把合成会话和模型标签写成产品事实。",
+      "把只读输入、禁用按钮描述成可用交互。",
+      "声称已完成完整对比度或无障碍审计。",
+      "把原型规则当作生产设计批准。"
+    ]
+  }
+}
